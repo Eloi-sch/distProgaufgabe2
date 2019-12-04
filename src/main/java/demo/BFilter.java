@@ -64,16 +64,13 @@ public class BFilter {
         for(int i=0;i<m;i++){
 
             if(tmpArray.get(i)==false){
-                System.out.println("tmp : "+tmpArray.get(i)+" and bit : "+tmpArray.get(i));
                 result = true;
             }
             else if(tmpArray.get(i)==true){
                 if(bitArray.get(i)==true){
-                    System.out.println("tmp : "+tmpArray.get(i)+" and bit : "+tmpArray.get(i));
                     result = true;
                 }
                 else{
-                System.out.println("tmp : "+tmpArray.get(i)+" and bit : "+tmpArray.get(i));
                 return false;
             }}
 
