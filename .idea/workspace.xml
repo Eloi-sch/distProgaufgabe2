@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="552c9a95-ada5-4100-94f6-40f1176d1b12" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="7fdea536-04c3-4596-a5d9-245556928f29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/demo/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/demo/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/BFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/BFilter.java" afterDir="false" />
+    </list>
+>>>>>>> 76668630cd8bb8f6ee056e20c6bd213387feffa0
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,9 +238,13 @@
       <workItem from="1575295889310" duration="86000" />
       <workItem from="1575370202722" duration="8278000" />
       <workItem from="1575383157246" duration="1501000" />
+<<<<<<< HEAD
       <workItem from="1575385236794" duration="1725000" />
       <workItem from="1575394062288" duration="302000" />
       <workItem from="1575449838031" duration="32000" />
+=======
+      <workItem from="1575385236794" duration="18048000" />
+>>>>>>> 76668630cd8bb8f6ee056e20c6bd213387feffa0
     </task>
     <task id="LOCAL-00001" summary="Ex 2.(a)">
       <created>1575289688274</created>
@@ -262,7 +281,35 @@
       <option name="project" value="LOCAL" />
       <updated>1575390184435</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ex 2.(c) add of src">
+      <created>1575390516377</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575390516377</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ex 2.(b) put stable local(pas avec words)">
+      <created>1575476504275</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575476504275</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Ex 2.(b) put stable version final">
+      <created>1575477682946</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575477682946</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Ex 2.(b) contains stable local">
+      <created>1575482928311</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575482928311</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +334,10 @@
     <MESSAGE value="Ex 2.(c) add of Arraylist" />
     <MESSAGE value="Ex 2.(c) reparation" />
     <MESSAGE value="Ex 2.(c) ajout words.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ex 2.(c) ajout words.txt" />
+    <MESSAGE value="Ex 2.(c) add of src" />
+    <MESSAGE value="Ex 2.(b) put stable local(pas avec words)" />
+    <MESSAGE value="Ex 2.(b) put stable version final" />
+    <MESSAGE value="Ex 2.(b) contains stable local" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ex 2.(b) contains stable local" />
   </component>
 </project>

@@ -1,18 +1,32 @@
 package demo;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 
 public class App {
 
     public static void main(String[] args) throws FileNotFoundException {
+        Word w = new Word();
+        BFilter b = new BFilter(w.getNumber(),0.03);//p=0.03 -> default value AND w.getNumber() is n
 
-        demo.Base b = new demo.Base(3,0.03);
-        demo.Word w = new demo.Word();
+        for (int i=0;i<w.getNumber();i++
+             ) {
+            b.put(w.getResultate().get(i));
+        }
 
-        //System.out.println(w.getResultate());
-        System.out.println(w.getNumber());
+        /*------------------------------------------------------------------------------------------*/
+
+        System.out.println(b.mightContain("abased"));//true
+        System.out.println(b.mightContain("monarchs"));//true
+        System.out.println(b.mightContain("monalisa"));//true
+        System.out.println(b.mightContain("doctrine"));//true
+
+        System.out.println(b.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
+        System.out.println(b.mightContain("atr"));//false
+
+        System.out.println(b.mightContain("bn"));//false positive
+        System.out.println(b.mightContain("elo"));//false positive
+        System.out.println(b.mightContain("ben"));//false positive
+
 
     }
 }

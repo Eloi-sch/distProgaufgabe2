@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Word {
 
-    private final List<String> resultate = new ArrayList();
+    private final List<String> resultate = new ArrayList<>();
 
     public Word() throws FileNotFoundException {
         resultate.addAll(readFromFile());
