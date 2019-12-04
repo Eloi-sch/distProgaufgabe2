@@ -10,22 +10,34 @@
 \maketitle
 
 \section{Idee des Bloom-Filters}
-Heutzutage gibt es viele Datenbanken und sehr oft wird nachgesehen, ob ein Wort (in unserem Fall) bereits in der Datenbank ist. Diesen Abfragenwerden als vergleichbare Algorithmen bezeichnet, dh sie vergleichen das getestete Wort mit jedem Wort in der Datenbank. Aber solche Anfragen benötigten sehr viel Speicherplatz.\\
+Heutzutage gibt es viele Datenbanken und sehr oft wird nachgesehen, ob ein Wort (in unserem Fall) bereits in der Datenbank ist. Diesen Abfragen werden als vergleichbare Algorithmen bezeichnet, dh sie vergleichen das getestete Wort mit jedem Wort in der Datenbank. Aber solche Anfragen benötigten sehr viel Speicherplatz.\\
 1970 fand Burton Howard Bloom eine Lösung. Er entwickelte den Bloom-Filter.\\
 Seine Idee war wie folgt. Er wollte die Abfragen in der Datenbank mit einem Bloom-Filter reduzieren, der vor der Datenbank platziert wird.\\
-Er besteht aus einem m-stelligen Bit-Array (das am Anfang mit Nullen gefüllt ist) und aus k verschiedenen Hashfunktionen mit einem Wertebereich von 0 bis m-1 (m und k sind reelle Zahlen). Die Wörter, die in der Datenbank gespeichert werden, treten zuerst in den Bloom-Filter. Die k Hashfunktionen verarbeiten diesen Wörter und geben als Ergebnis k Zahlen zwischen 0 und m-1 zurück. Diese Zahlen stellen alle Bit in dem m-stelligen Bit-Array dar, die auf 1 eingesetzt werden müssen.\\
+Er besteht aus einem m-stelligen Bit-Array (das am Anfang mit Nullen gefüllt ist) und aus k verschiedenen Hashfunktionen mit einem Wertebereich von 0 bis m-1 (m und k sind natürliche Zahlen). Die Wörter, die in der Datenbank gespeichert werden, treten zuerst in den Bloom-Filter. Die k Hashfunktionen verarbeiten diesen Wörter und geben als Ergebnis k Zahlen zwischen 0 und m-1 zurück. Diese Zahlen stellen alle Bit in dem m-stelligen Bit-Array dar, die auf 1 eingesetzt werden müssen.\\
 Die Abfrage können dann beginnen. Der Bloom-Filter erhält zuerst die Abfragen. Das getestete Wort folgt dem gleichen Prozess wie die anderen Wörter. Hier wieder werden Zahlen zwischen 0 und m-1 zurückgegeben. Der Bloom-Filter wird diese Zahlen/Positionen mit seinem Bit-Array vergleichen. Wenn es Unterschiede gibt, dann befindet sich das getestete Wort sicherlich nicht in der Datenbank. Andernfalls ist das getestete Wort nicht unbedingt in der Datenbank vorhanden. Es ist möglich, dass die durch die Hashfunktionen des getesteten Wortes erzeugten Positionen in die Positionen 1 fallen. Solche Fehler werden als falsch positive Ergebnisse bezeichnet.\\
-Um einen Bloom-Filter verwenden zu können, ist es wichtig, die Anzahl der gespeicherten n Wörter und die Fehlerwahrscheinlichkeit p zu kennen, dh die Wahrscheinlichkeit, dass ein falsch positive Ergebnisse vorliegt. Die Werte von n und p werden verwendet, um die Länge des Bit-Arrays m und die Anzahl der Hash-Funktionen k zu ermitteln.
+Um einen Bloom-Filter verwenden zu können, ist es wichtig, die Anzahl der gespeicherten n Wörter und die Fehlerwahrscheinlichkeit p zu kennen, dh die Wahrscheinlichkeit, dass ein falsch positive Ergebnisse vorliegt. Die Werte von n und p werden verwendet, um die Länge des Bit-Arrays m und die Anzahl der Hashfunktionen k zu ermitteln.
 
 \section{Vorteilen}
 
-Space and time advantages
+Space and time advantages\\
+Le filtre de Bloom utilise un espace constant. C'est son principal intérêt.\\
+Ce genre de filtre permet d'éviter des appels inutiles à une très grande base de données en vérifiant tout de suite qu'une ligne recherchée n'y est pas présente. Le filtre n'étant pas parfait, la recherche inutile aura toutefois lieu dans certains cas, mais une grande partie sera néanmoins évitée, multipliant ainsi le nombre de requêtes utiles possibles à matériel donné.\\
+brauchen Bloom-Filter nur sehr wenig Speicherplatz.\\
 
 \section{Nachteilen}
 
+falsch positive Ergebnisse\\
+L'inconvénient est toutefois qu'il y a d'autant plus de faux positifs qu'il y a d'éléments dans la structure.\\
+the more elements that are added to the set, the larger the probability of false positives.\\
+Le retrait d'un élément n'est pas possible.\\
+
 \section{Beispiel aus der Praxis}
+
+Zahlreiche Anwendung in der Praxis -> Wiki fr Utilisation\\
+werden Bloomfilter heute oft bei der Datenbankverwaltung und für das Routing in Netzwerken eingesetzt.\\
 
 \section{Test unserer Datenstruktur}
 
+Der Webbrowser Google Chrome pflegt einen Bloomfilter mit den Signaturen gefährlicher Webseiten und überprüft bei Eingabe einer URL, ob diese in diesem Filter enthalten ist.[7]
 
 \end{document}
