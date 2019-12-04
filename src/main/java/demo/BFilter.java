@@ -15,6 +15,7 @@ public class BFilter {
     private int k;
     private double p;
     private List<Boolean> bitArray;
+    private List<Boolean> tmpArray;
 
     public BFilter(int n, double p) {
         this.p = p;
@@ -25,10 +26,19 @@ public class BFilter {
         for(int i =0;i<m;i++){
             bitArray.add(i,false);
         }
+        this.tmpArray = new ArrayList<>();
+        for(int i =0;i<m;i++){
+            tmpArray.add(i,false);
+        }
 
         System.out.println("Mit n = " + this.n + " und p = " + this.p + " :  m = " + this.m + " und k = " + this.k);
     }
 
+    public void initTmp(){
+        for(int i =0;i<m;i++){
+            tmpArray.set(i,false);
+        }
+    }
     public void put(String word) {
 
         int seed = 0;
@@ -38,10 +48,46 @@ public class BFilter {
         }
 
     }
+    public void putTmp(String word) {
+
+        int seed = 0;
+        for (int i = 0; i < k; i++) {
+            tmpArray.set(abs((murmur3_128(seed).hashString(word, StandardCharsets.UTF_8).asInt()%m)), true);
+            seed += 1515;
+        }
+
+    }
+    public boolean mightContain(String word){
+        initTmp();
+        boolean result = false;
+        putTmp(word);
+        for(int i=0;i<m;i++){
+
+            if(tmpArray.get(i)==false){
+                System.out.println("tmp : "+tmpArray.get(i)+" and bit : "+tmpArray.get(i));
+                result = true;
+            }
+            else if(tmpArray.get(i)==true){
+                if(bitArray.get(i)==true){
+                    System.out.println("tmp : "+tmpArray.get(i)+" and bit : "+tmpArray.get(i));
+                    result = true;
+                }
+                else{
+                System.out.println("tmp : "+tmpArray.get(i)+" and bit : "+tmpArray.get(i));
+                return false;
+            }}
+
+        }
+
+        return result;
+    }
 
     // Getter and Setter
 
     public List<Boolean> getBitArray() {
         return bitArray;
+    }
+    public List<Boolean> getTmpArray() {
+        return tmpArray;
     }
 }
