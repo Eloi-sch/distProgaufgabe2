@@ -1,14 +1,10 @@
 package demo;
 
-import com.google.common.hash.HashCode;
-import com.google.common.hash.HashFunction;
-import com.google.common.hash.Hashing;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.hash.Hashing.murmur3_128;
 import static java.lang.Math.abs;
 
@@ -33,20 +29,19 @@ public class BFilter {
         System.out.println("Mit n = " + this.n + " und p = " + this.p + " :  m = " + this.m + " und k = " + this.k);
     }
 
-    public List<Boolean> getBitArray() {
-        return bitArray;
-    }
-
     public void put(String word) {
 
         int seed = 0;
         for (int i = 0; i < k; i++) {
-            bitArray.set(abs((murmur3_128(seed).hashString(word.toString(), StandardCharsets.UTF_8).asInt()%m)), true);
-int j = murmur3_128(seed).hashString(word.toString(), StandardCharsets.UTF_8).asInt();
-            System.out.println(abs(j%m)+"    "+bitArray.size());
+            bitArray.set(abs((murmur3_128(seed).hashString(word, StandardCharsets.UTF_8).asInt()%m)), true);
             seed += 1515;
-
         }
 
+    }
+
+    // Getter and Setter
+
+    public List<Boolean> getBitArray() {
+        return bitArray;
     }
 }

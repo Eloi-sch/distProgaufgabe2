@@ -10,10 +10,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/demo/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/demo/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/demo/Base.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/demo/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/demo/Word.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/demo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/BFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/BFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/BFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/demo/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/Word.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -237,7 +236,7 @@
       <workItem from="1575295889310" duration="86000" />
       <workItem from="1575370202722" duration="8278000" />
       <workItem from="1575383157246" duration="1501000" />
-      <workItem from="1575385236794" duration="10847000" />
+      <workItem from="1575385236794" duration="11966000" />
     </task>
     <task id="LOCAL-00001" summary="Ex 2.(a)">
       <created>1575289688274</created>
@@ -281,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575390516377</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ex 2.(b) put stable local(pas avec words)">
+      <created>1575476504275</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575476504275</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +313,7 @@
     <MESSAGE value="Ex 2.(c) reparation" />
     <MESSAGE value="Ex 2.(c) ajout words.txt" />
     <MESSAGE value="Ex 2.(c) add of src" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ex 2.(c) add of src" />
+    <MESSAGE value="Ex 2.(b) put stable local(pas avec words)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ex 2.(b) put stable local(pas avec words)" />
   </component>
 </project>

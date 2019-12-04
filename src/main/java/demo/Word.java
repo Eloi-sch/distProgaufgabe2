@@ -2,23 +2,21 @@ package demo;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Word {
 
-    private final Set<String> resultate = new HashSet<>();
+    private final List<String> resultate = new ArrayList<>();
 
     public Word() throws FileNotFoundException {
         resultate.addAll(readFromFile());
 
     }
 
-    private Set<String> readFromFile() {
+    private List<String> readFromFile() {
         try (BufferedReader br = new BufferedReader(new FileReader("words.txt"));) {
-            return br.lines().map(line -> new String(String.valueOf(line))).collect(Collectors.toSet());
+            return br.lines().map(line -> new String(String.valueOf(line))).collect(Collectors.toList());
         } catch (IOException e) {
             throw new IllegalStateException("unknown file");
         }
@@ -27,7 +25,7 @@ public class Word {
 
     // all getters and setters
 
-    public Set<String> getResultate() {
+    public List<String> getResultate() {
         return resultate;
     }
     public int getNumber(){
