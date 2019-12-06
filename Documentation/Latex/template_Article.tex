@@ -1,5 +1,6 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 %opening
 \title{Bloom-Filter}
@@ -38,14 +39,18 @@ Zweitens ist das Entfernen eines Elements unmöglich, weil das Auftreten von fal
 
 \section{Beispiel aus der Praxis}
 
-Zahlreiche Anwendung in der Praxis -> Wiki fr Utilisation\\
-werden Bloomfilter heute oft bei der Datenbankverwaltung und für das Routing in Netzwerken eingesetzt.\\
-\\
-Der Webbrowser Google Chrome pflegt einen Bloomfilter mit den Signaturen gefährlicher Webseiten und überprüft bei Eingabe einer URL, ob diese in diesem Filter enthalten ist.[7]\\
+Der Bloom-Filter hat in der Praxis viele Anwendungen. Eine dieser Anwendungen ist das URL-Testen von gefährlichen Websites. Es ist diese Funktion, die die Webbrowser Google verwendet. Tatsächlich erlaubt der Bloom-Filter, die URLs aller Websites zu testen, indem er sie mit ihrer gefährlichen Website-Datenbank vergleicht.\\
+Die Größe eines solchen Filters ist sehr klein im Vergleich zu der Größe, die durch den Vergleichstest einer Website in der Datenbank dargestellt würde, was diesen Filter viel vorteilhafter macht.
 
 \section{Test unserer Datenstruktur}
-Plus P est petit plus la chance d'avoir des erreurs est petites et donc plus p est grand
 
-
+Unser erster Test war die Erstellung eines Filters vor einer Wahrscheinlichkeit p von 3\%. Danach haben wir einige Tests gemacht.\\
+Von 1) zu 4) sind das Wörter, die sich in Wörter.txt befinden. Die Antwort ist true. Also ist das in Ordnung.\\
+Von 5) bis 6) sind das Wörter, die nicht in Wörter.txt enthalten sind und gut erkannt wurden.\\
+Von 7) bis 8) sind das Wörter, die nicht sich in Wörter.txt enthalten sind und die falsch erkannt wurden. Es sind falsch positiven Ergebnisse. \\ \\
+\includegraphics{../Image/filter1}\\ \\
+Wir haben diesen Test noch einmal durchgeführt. Aber diesmal wurde p auf 1\% reduziert.\\
+Der Unterschied liegt in den falsch positiven Ergebnissen. Er zeigt uns, dass je kleiner p ist, desto kleiner ist die Anzahl der falsch positiven Ergebnisse.\\ \\
+\includegraphics{../Image/filter2}
 
 \end{document}

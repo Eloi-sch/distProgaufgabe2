@@ -11,16 +11,16 @@ public class App {
              ) {
             filter1.put(w.getResultate().get(i));
         }
-        System.out.println(filter1.mightContain("abased"));//true
-        System.out.println(filter1.mightContain("monarchs"));//true
-        System.out.println(filter1.mightContain("monalisa"));//true
-        System.out.println(filter1.mightContain("doctrine"));//true
+        System.out.println("1) abased liegt in filter1 :"+filter1.mightContain("abased"));//true
+        System.out.println("2) monarchs liegt in filter1 :"+filter1.mightContain("monarchs"));//true
+        System.out.println("3) monalisa liegt in filter1 :"+filter1.mightContain("monalisa"));//true
+        System.out.println("4) doctrine liegt in filter1 :"+filter1.mightContain("doctrine"));//true
 
-        System.out.println(filter1.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
-        System.out.println(filter1.mightContain("atr"));//false
+        System.out.println("5) jfsdgusdhqsfdkfldsjdlfkjfd liegt in filter1 :"+filter1.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
+        System.out.println("6) atr liegt in filter1 :"+filter1.mightContain("atr"));//false
 
-        System.out.println(filter1.mightContain("bn"));//false positive
-        System.out.println(filter1.mightContain("elo"));//false positive
+        System.out.println("7) bn liegt in filter1 :"+filter1.mightContain("bn"));//false positive
+        System.out.println("8) elo liegt in filter1 :"+filter1.mightContain("elo"));//false positive
 
 System.out.println("test with filter 2");
 
@@ -29,16 +29,16 @@ System.out.println("test with filter 2");
         ) {
             filter2.put(w.getResultate().get(i));
         }
-        System.out.println(filter2.mightContain("abased"));//true
-        System.out.println(filter2.mightContain("monarchs"));//true
-        System.out.println(filter2.mightContain("monalisa"));//true
-        System.out.println(filter2.mightContain("doctrine"));//true
+        System.out.println("1) abased liegt in filter1 :"+filter2.mightContain("abased"));//true
+        System.out.println("2) monarchs liegt in filter1 :"+filter2.mightContain("monarchs"));//true
+        System.out.println("3) monalisa liegt in filter1 :"+filter2.mightContain("monalisa"));//true
+        System.out.println("4) doctrine liegt in filter1 :"+filter2.mightContain("doctrine"));//true
 
-        System.out.println(filter2.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
-        System.out.println(filter2.mightContain("atr"));//false
+        System.out.println("5) jfsdgusdhqsfdkfldsjdlfkjfd liegt in filter1 :"+filter2.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
+        System.out.println("6) atr liegt in filter1 :"+filter2.mightContain("atr"));//false
 
-        System.out.println(filter2.mightContain("bn"));//false
-        System.out.println(filter2.mightContain("elo"));//false
+        System.out.println("7) bn liegt in filter1 :"+filter2.mightContain("bn"));//false
+        System.out.println("8) elo liegt in filter1 :"+filter2.mightContain("elo"));//false
 
     }
 }
