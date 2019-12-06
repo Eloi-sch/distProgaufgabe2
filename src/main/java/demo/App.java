@@ -6,27 +6,39 @@ public class App {
 
     public static void main(String[] args) throws FileNotFoundException {
         Word w = new Word();
-        BFilter b = new BFilter(w.getNumber(),0.03);//p=0.03 -> default value AND w.getNumber() is n
-
+        BFilter filter1 = new BFilter(w.getNumber(),0.03);//p=0.03 -> default value AND w.getNumber() is n
         for (int i=0;i<w.getNumber();i++
              ) {
-            b.put(w.getResultate().get(i));
+            filter1.put(w.getResultate().get(i));
         }
+        System.out.println(filter1.mightContain("abased"));//true
+        System.out.println(filter1.mightContain("monarchs"));//true
+        System.out.println(filter1.mightContain("monalisa"));//true
+        System.out.println(filter1.mightContain("doctrine"));//true
 
-        /*------------------------------------------------------------------------------------------*/
+        System.out.println(filter1.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
+        System.out.println(filter1.mightContain("atr"));//false
 
-        System.out.println(b.mightContain("abased"));//true
-        System.out.println(b.mightContain("monarchs"));//true
-        System.out.println(b.mightContain("monalisa"));//true
-        System.out.println(b.mightContain("doctrine"));//true
+        System.out.println(filter1.mightContain("bn"));//false positive
+        System.out.println(filter1.mightContain("elo"));//false positive
 
-        System.out.println(b.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
-        System.out.println(b.mightContain("atr"));//false
+System.out.println("test with filter 2");
 
-        System.out.println(b.mightContain("bn"));//false positive
-        System.out.println(b.mightContain("elo"));//false positive
-        System.out.println(b.mightContain("ben"));//false positive
+        BFilter filter2 = new BFilter(w.getNumber(),0.01);
+        for (int i=0;i<w.getNumber();i++
+        ) {
+            filter2.put(w.getResultate().get(i));
+        }
+        System.out.println(filter2.mightContain("abased"));//true
+        System.out.println(filter2.mightContain("monarchs"));//true
+        System.out.println(filter2.mightContain("monalisa"));//true
+        System.out.println(filter2.mightContain("doctrine"));//true
 
+        System.out.println(filter2.mightContain("jfsdgusdhqsfdkfldsjdlfkjfd"));//false
+        System.out.println(filter2.mightContain("atr"));//false
+
+        System.out.println(filter2.mightContain("bn"));//false
+        System.out.println(filter2.mightContain("elo"));//false
 
     }
 }

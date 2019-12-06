@@ -24,19 +24,17 @@ Ein Bloom-Filter hat zwei grossen Vorteilen.
 Einerseits gibt es den Vorteil des Speichers, d.h. ein Bloom-Filter nimmt sehr wenig Speicherplatz ein. Dieser Speicherplatz ist auch konstant. Seine Größe ist unabhängig von der Anzahl der enthaltenen Elemente.
 
 Andererseits gibt es den Vorteil der Zeit. Ein Bloom-Filter vermeidet unnötige Aufrufe einer sehr großen Datenbank und überprüft sofort, ob das gesuchte Objekt nicht vorhanden ist.\\
+
 Der Bloom-Filter hat auch die Eigenschaft, dass die Zeit, die benötigt wird, um Elemente hinzuzufügen oder zu überprüfen, ob sich ein Element in der Datenbank befindet, eine feste Konstante ist, die Komplexität ist O(k) (k ist die Anzahl der Hashfunktionen), völlig unabhängig von der Anzahl der Elemente in der Datenbank.
 
 \section{Nachteilen}
 
-------------------
+Aber ein solcher Filter ist nicht perfekt. Er hat auch einigen Nachteilen.
 
-falsch positive Ergebnisse\\
-L'inconvénient est toutefois qu'il y a d'autant plus de faux positifs qu'il y a d'éléments dans la structure.\\
-the more elements that are added to the set, the larger the probability of false positives.\\
-Le filtre n'étant pas parfait, la recherche inutile aura toutefois lieu dans certains cas, mais une grande partie sera néanmoins évitée, multipliant ainsi le nombre de requêtes utiles possibles à matériel donné.\\
-\\
-Le retrait d'un élément n'est pas possible.\\
-Removing an element from this simple Bloom filter is impossible because false negatives are not permitted.\\
+Zuerst kann den Filter falsch positive Ergebnisse als Antwort zurückgeben. Falsch positive Ergebnisse sind Objekte, die sich nicht in der Datenbank befinden, aber dennoch vom Filter in der Datenbank gesehen werden, da die Hashfunktionen immer an eine Stelle zurückgegeben werden, an der es eine 1 gab. Danach wird eine unnötige Suche in der gesamten Datenbank durchgeführt und schließlich eine negative Antwort erhalten.\\
+Dieses Problem der Anzahl der falsch positiven Ergebnisse hängt von der Anzahl der Wörter der Datenbank ab. Je mehr Wörter in der Datenbank vorhanden sind, desto mehr falsch positive Ergebnisse können auftreten. Dennoch ist es wichtig zu beachten, dass es möglich ist, bei der Erstellung des Filters eine Wahrscheinlichkeit für falsch positive Ergebnisse zu definieren und so das Risiko, diese zu erhalten, zu reduzieren.\\
+
+Zweitens ist das Entfernen eines Elements unmöglich, weil das Auftreten von falsch negativen Ergebnissen nicht erlaubt ist.
 
 \section{Beispiel aus der Praxis}
 
